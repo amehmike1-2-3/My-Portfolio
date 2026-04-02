@@ -3,14 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="mHHYhBdoFE_mjenp2e8_vdLjzd9OublNmweneg67JwI" />
 <title>NeyoDigitals — Premium Digital Products &amp; Courses</title>
-    
-     <!-- Favicon from Unsplash -->
-  <link rel="icon" type="image/png" 
-        href="https://images.unsplash.com/photo-1581090700227-4c4f50b4c8f7?w=64&h=64&fit=crop" />
 <meta name="description" content="Nigeria's #1 Digital Blueprint Store. eBooks, courses and templates to earn online. Instant download from ₦500.">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230D0D0D'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia,serif' font-size='40' font-weight='bold' fill='%23C9A84C'%3EN%3C/text%3E%3C/svg%3E">
+<link rel="icon" type="image/png" href="1000704384.png">
+<link rel="apple-touch-icon" href="1000704384.png">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
 <style>
 /* ═══════════════ TOKENS ═══════════════ */
@@ -308,6 +304,22 @@ nav{position:sticky;top:0;z-index:200;display:flex;align-items:center;justify-co
 .cta-sub{font-size:.94rem;color:var(--muted);max-width:440px;margin:0 auto 40px;}
 .cta-div{width:1px;height:52px;background:linear-gradient(to bottom,transparent,var(--gold),transparent);margin:0 auto 40px;}
 
+/* ══ BLOG SECTION ══ */
+.blog-wrap{padding:100px 60px;background:var(--bg);}
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;max-width:1200px;margin:0 auto;}
+.blog-card{background:var(--bg2);border:1px solid var(--border);overflow:hidden;border-radius:2px;transition:transform var(--r),border-color var(--r),box-shadow var(--r);display:flex;flex-direction:column;}
+.blog-card:hover{transform:translateY(-6px);border-color:var(--gold);box-shadow:0 0 0 1px rgba(201,168,76,.2),0 20px 60px rgba(0,0,0,.5);}
+.blog-card-img{height:180px;position:relative;overflow:hidden;}
+.blog-card-img img{width:100%;height:100%;object-fit:cover;filter:brightness(.65) saturate(.7);transition:transform .6s ease;}
+.blog-card:hover .blog-card-img img{transform:scale(1.07);}
+.blog-card-cat{position:absolute;top:12px;left:12px;background:var(--gold);color:#0A0A0A;font-size:.56rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:4px 11px;border-radius:2px;}
+.blog-card-body{padding:22px;flex:1;display:flex;flex-direction:column;}
+.blog-card-date{font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;}
+.blog-card-title{font-family:'Cormorant Garamond',serif;font-size:1.12rem;font-weight:400;color:var(--cream);line-height:1.3;margin-bottom:10px;}
+.blog-card-desc{font-size:.77rem;color:var(--muted);line-height:1.72;flex:1;margin-bottom:16px;}
+.blog-card-link{font-size:.69rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:gap .3s;}
+.blog-card-link:hover{gap:10px;}
+
 /* ══ FOOTER ══ */
 footer{background:var(--bg);border-top:1px solid var(--border);padding:56px 60px;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;}
 .fbrand p{font-size:.79rem;color:var(--muted);line-height:1.75;max-width:230px;margin-top:12px;}
@@ -355,6 +367,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:56px 60px
   .testi-wrap{padding:80px 20px;} .tgrid{grid-template-columns:1fr;}
   .moti-wrap{padding:60px 20px;}
   .faq-wrap{padding:80px 20px;}
+  .blog-wrap{padding:80px 20px;} .blog-grid{grid-template-columns:1fr;}
   .nl-wrap{padding:80px 20px;} .nl-form{flex-direction:column;} .nl-input{border-right:1px solid var(--border);border-bottom:none;}
   .cta-wrap{padding:90px 20px;}
   footer{grid-template-columns:1fr 1fr;padding:40px 20px;gap:28px;}
@@ -394,6 +407,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:56px 60px
     <li><a href="#products">Products</a></li>
     <li><a href="#affiliate">Affiliate</a></li>
     <li><a href="#analytics">Analytics</a></li>
+    <li><a href="#blog">Blog</a></li>
     <li><a href="#reviews">Reviews</a></li>
     <li><a href="#faq">FAQ</a></li>
   </ul>
@@ -778,7 +792,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:56px 60px
     </div>
   </div>
 </section>
-    
+
 <!-- ══ MOTIVATIONAL SECTION ══ -->
 <section class="moti-wrap rv">
   <div class="moti-bg"></div>
@@ -805,6 +819,53 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:56px 60px
     <div class="fi"><button class="fq">Can I earn as an affiliate? <span class="fi-ic">+</span></button><div class="fa"><p>Yes! Scroll up to the Affiliate section, search any product and generate your personal affiliate link. You earn a commission on every sale you refer through Payhip's affiliate system.</p></div></div>
     <div class="fi"><button class="fq">Will I get updates to products I buy? <span class="fi-ic">+</span></button><div class="fa"><p>Yes! Lifetime access means every future update is yours automatically &mdash; at zero extra cost.</p></div></div>
     <div class="fi"><button class="fq">How do I use discount code NEYO20? <span class="fi-ic">+</span></button><div class="fa"><p>Click any "Get It" button, go to the Payhip product page and enter <strong>NEYO20</strong> at checkout for 20% off.</p></div></div>
+  </div>
+</section>
+
+<!-- ══ BLOG ══ -->
+<section class="blog-wrap" id="blog">
+  <div class="sh rv">
+    <div class="stag">The Digital Blueprint</div>
+    <h2 class="stitle">Learn. Apply. <em>Earn.</em></h2>
+    <div class="sline"></div>
+  </div>
+  <div class="blog-grid">
+    <div class="blog-card rv">
+      <div class="blog-card-img">
+        <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&q=80" alt="Social Media" loading="lazy">
+        <div class="blog-card-cat">Social Media</div>
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-date">April 2025 &middot; 5 min read</div>
+        <h3 class="blog-card-title">5 Things Every Small Business Must Post on Social Media</h3>
+        <p class="blog-card-desc">Most small businesses post randomly and wonder why nobody buys. Here are the 5 proven post types that build trust and drive sales — consistently.</p>
+        <a href="#" class="blog-card-link" onclick="event.preventDefault();openPost(1)">Read Article &rarr;</a>
+      </div>
+    </div>
+    <div class="blog-card rv" style="transition-delay:.08s">
+      <div class="blog-card-img">
+        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&q=80" alt="Freelancing" loading="lazy">
+        <div class="blog-card-cat">Freelancing</div>
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-date">March 2025 &middot; 4 min read</div>
+        <h3 class="blog-card-title">How to Set Your Freelance Rates Without Losing Clients</h3>
+        <p class="blog-card-desc">Undercharging is killing your business. Here's the exact framework Nigerians use to price confidently and land premium clients every time.</p>
+        <a href="#" class="blog-card-link" onclick="event.preventDefault();openPost(2)">Read Article &rarr;</a>
+      </div>
+    </div>
+    <div class="blog-card rv" style="transition-delay:.16s">
+      <div class="blog-card-img">
+        <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=600&q=80" alt="Budget" loading="lazy">
+        <div class="blog-card-cat">Money Tips</div>
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-date">March 2025 &middot; 3 min read</div>
+        <h3 class="blog-card-title">Why Every Nigerian Entrepreneur Needs a Monthly Budget</h3>
+        <p class="blog-card-desc">No budget = no control. Discover the simple system that helps Nigerian entrepreneurs keep more of what they earn and stop living cycle to cycle.</p>
+        <a href="#" class="blog-card-link" onclick="event.preventDefault();openPost(3)">Read Article &rarr;</a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -842,10 +903,12 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:56px 60px
     <a href="https://payhip.com/NeyoDigital" class="logo">Neyo<span>Digitals</span></a>
     <p>Premium digital products helping Nigerians earn, grow and build real income online &mdash; no PayPal needed.</p>
     <div class="socials">
-      <a href="#" class="soc" title="TikTok">&#127925;</a>
-      <a href="https://wa.me/2349072212496" class="soc" title="WhatsApp">&#128172;</a>
-      <a href="#" class="soc" title="Instagram">&#128248;</a>
-      <a href="#" class="soc" title="Twitter/X">&#128038;</a>
+      <a href="https://discord.gg/37K2SAAb" class="soc" title="Discord" target="_blank">&#127926;</a>
+      <a href="https://wa.me/2349072212496" class="soc" title="WhatsApp" target="_blank">&#128172;</a>
+      <a href="https://x.com/neyo_miguel" class="soc" title="X / Twitter" target="_blank">&#128038;</a>
+      <a href="https://www.facebook.com/profile.php?id=61575530121432" class="soc" title="Facebook" target="_blank">&#128218;</a>
+      <a href="https://pin.it/228Ph5ZSA" class="soc" title="Pinterest" target="_blank">&#128204;</a>
+      <a href="https://github.com/amehmike1-2-3" class="soc" title="GitHub" target="_blank">&#128187;</a>
     </div>
   </div>
   <div class="fcol">
@@ -862,6 +925,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:56px 60px
   <div class="fcol">
     <h4>Quick Links</h4>
     <ul>
+      <li><a href="#blog">Blog</a></li>
       <li><a href="#affiliate">Affiliate Program</a></li>
       <li><a href="#analytics">Store Analytics</a></li>
       <li><a href="#reviews">Reviews</a></li>
@@ -869,12 +933,14 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:56px 60px
     </ul>
   </div>
   <div class="fcol">
-    <h4>Support</h4>
+    <h4>Connect</h4>
     <ul>
-      <li><a href="https://wa.me/2349072212496">WhatsApp Us</a></li>
-      <li><a href="https://payhip.com/NeyoDigital/contact">Email Support</a></li>
-      <li><a href="https://payhip.com/NeyoDigital">Refund Policy</a></li>
-      <li><a href="https://payhip.com/NeyoDigital">Privacy Policy</a></li>
+      <li><a href="https://wa.me/2349072212496" target="_blank">WhatsApp Us</a></li>
+      <li><a href="https://discord.gg/37K2SAAb" target="_blank">Discord Community</a></li>
+      <li><a href="https://x.com/neyo_miguel" target="_blank">X (Twitter)</a></li>
+      <li><a href="https://www.facebook.com/profile.php?id=61575530121432" target="_blank">Facebook</a></li>
+      <li><a href="https://pin.it/228Ph5ZSA" target="_blank">Pinterest</a></li>
+      <li><a href="https://github.com/amehmike1-2-3" target="_blank">GitHub</a></li>
     </ul>
   </div>
 </footer>
@@ -1052,6 +1118,234 @@ function subNl(){
   document.getElementById('nlForm').style.display='none';
   document.getElementById('nl-ok').style.display='block';
 }
+
+/* ── Blog Post Modal ── */
+function openPost(id){
+  document.querySelectorAll('.post-modal').forEach(m=>m.classList.remove('open'));
+  const m=document.getElementById('post-'+id);
+  if(m){m.classList.add('open');document.body.style.overflow='hidden';}
+}
+function closePost(){
+  document.querySelectorAll('.post-modal').forEach(m=>m.classList.remove('open'));
+  document.body.style.overflow='';
+}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closePost();});
 </script>
+
+<!-- ══ BLOG POST MODALS ══ -->
+
+<!-- POST 1: 5 Things Every Small Business Must Post -->
+<div class="post-modal" id="post-1">
+  <div class="post-modal-inner">
+    <button class="post-modal-close" onclick="closePost()">&#10005; Close</button>
+    <div class="post-modal-hero">
+      <div class="post-cat-tag">Social Media &middot; Business Tips</div>
+      <h1 class="post-modal-title">5 Things Every Small Business Must Post on <em>Social Media</em></h1>
+      <div class="post-modal-meta">
+        <span>By Neyo Digital</span>
+        <span class="pmsep"></span>
+        <span>April 2025</span>
+        <span class="pmsep"></span>
+        <span>5 min read</span>
+      </div>
+    </div>
+    <div class="post-modal-body">
+      <p>Most small business owners make the same mistake &mdash; they either don&rsquo;t post at all or post randomly with no strategy. Then they wonder why nobody is buying. The truth is, <strong>social media is the most powerful free marketing tool available</strong> &mdash; but only if you use it correctly.</p>
+      <p>In this article, I&rsquo;ll show you the exact 5 types of posts that every business should be making consistently to attract attention, build trust and convert followers into paying customers.</p>
+      <div class="post-tip">
+        <div class="post-tip-label">&#128161; Key Insight</div>
+        <div class="post-tip-text">&ldquo;Consistency beats perfection. One good post every day beats one perfect post every month.&rdquo;</div>
+      </div>
+      <h2>The 5 Post Types You Need</h2>
+      <div class="post-num-block">
+        <div class="pnb-num">01</div>
+        <div class="pnb-content">
+          <div class="pnb-title">The <span>Quote Post</span></div>
+          <p>Inspirational or business quotes build your brand personality and get shared massively. People love saving and sharing quotes that resonate with them. Use quotes related to your niche &mdash; business, money, hustle, success. This keeps your page active even when you have nothing to sell that day.</p>
+        </div>
+      </div>
+      <div class="post-num-block">
+        <div class="pnb-num">02</div>
+        <div class="pnb-content">
+          <div class="pnb-title">The <span>Promo Post</span></div>
+          <p>This is your direct sales post. Show your product, state the price clearly, and tell people exactly how to buy it. Don&rsquo;t be shy about this &mdash; people need to be told what to do. Use urgency like &ldquo;Limited Time&rdquo; or &ldquo;Only 5 Left&rdquo; to push people to act fast. Post this 2&ndash;3 times per week.</p>
+        </div>
+      </div>
+      <div class="post-num-block">
+        <div class="pnb-num">03</div>
+        <div class="pnb-content">
+          <div class="pnb-title">The <span>Tip Post</span></div>
+          <p>Share free valuable tips related to your niche. If you sell budget planners, share money saving tips. If you sell social media templates, share posting strategies. When you give value for free, people trust you &mdash; and trust leads to sales. This is called authority building and it&rsquo;s one of the most powerful things you can do.</p>
+        </div>
+      </div>
+      <div class="post-num-block">
+        <div class="pnb-num">04</div>
+        <div class="pnb-content">
+          <div class="pnb-title">The <span>Testimonial Post</span></div>
+          <p>Social proof is everything. When someone sees that real people have bought from you and are happy, their resistance to buying drops immediately. Screenshot any good feedback you receive and turn it into a post. Even if you&rsquo;re new and have no reviews yet &mdash; ask your first customers for feedback and post it immediately.</p>
+        </div>
+      </div>
+      <div class="post-num-block">
+        <div class="pnb-num">05</div>
+        <div class="pnb-content">
+          <div class="pnb-title">The <span>Announcement Post</span></div>
+          <p>New product dropping? Price change? Bundle deal? Tell your followers first. Announcements create excitement and urgency. They make your followers feel like insiders &mdash; like they&rsquo;re part of something. Use phrases like &ldquo;New Drop&rdquo;, &ldquo;Just Launched&rdquo;, &ldquo;Limited Offer&rdquo; to drive engagement and clicks.</p>
+        </div>
+      </div>
+      <h2>How Often Should You Post?</h2>
+      <p>The minimum for any business serious about growth is <strong>once per day</strong>. Rotate through the 5 post types above and you&rsquo;ll never run out of content ideas.</p>
+      <div class="post-tip">
+        <div class="post-tip-label">&#128197; Weekly Schedule</div>
+        <div class="post-tip-text">Mon: Quote &middot; Tue: Promo &middot; Wed: Tip &middot; Thu: Testimonial &middot; Fri: Promo &middot; Sat: Announcement &middot; Sun: Quote</div>
+      </div>
+      <h2>The Shortcut</h2>
+      <p>Creating all these posts from scratch every day is time-consuming. That&rsquo;s exactly why we created the <strong>Business Social Media Post Kit</strong> &mdash; 6 professionally designed, ready-to-edit templates covering all the post types above. Just open, change your business name and post. Done in under 5 minutes.</p>
+      <div class="post-cta-box">
+        <div class="pcb-eye">Featured Product</div>
+        <div class="pcb-title">Business Social Media Post Kit</div>
+        <div class="pcb-sub">6 done-for-you templates covering every post type in this article. Edit in Canva in minutes.</div>
+        <a href="https://payhip.com/b/IB1PC" target="_blank" class="btn-g">Get It Now &mdash; &#8358;12,000 &rarr;</a>
+      </div>
+      <p>Remember &mdash; the businesses that win on social media are not always the ones with the best products. They are the ones that show up <strong>consistently, professionally and strategically</strong>. Start today. Your first sale is closer than you think. &#128591;</p>
+    </div>
+  </div>
+</div>
+
+<!-- POST 2: Freelance Rates -->
+<div class="post-modal" id="post-2">
+  <div class="post-modal-inner">
+    <button class="post-modal-close" onclick="closePost()">&#10005; Close</button>
+    <div class="post-modal-hero">
+      <div class="post-cat-tag">Freelancing</div>
+      <h1 class="post-modal-title">How to Set Your Freelance Rates Without <em>Losing Clients</em></h1>
+      <div class="post-modal-meta">
+        <span>By Neyo Digital</span>
+        <span class="pmsep"></span>
+        <span>March 2025</span>
+        <span class="pmsep"></span>
+        <span>4 min read</span>
+      </div>
+    </div>
+    <div class="post-modal-body">
+      <p>One of the biggest mistakes Nigerian freelancers make is <strong>undercharging</strong>. They think lowering their price will attract more clients. In reality, it does the opposite &mdash; it makes you look cheap and untrustworthy.</p>
+      <div class="post-tip">
+        <div class="post-tip-label">&#128161; Truth</div>
+        <div class="post-tip-text">&ldquo;Clients don&rsquo;t just pay for your skill &mdash; they pay for your confidence and positioning.&rdquo;</div>
+      </div>
+      <h2>How to Price Yourself Correctly</h2>
+      <div class="post-num-block">
+        <div class="pnb-num">01</div>
+        <div class="pnb-content">
+          <div class="pnb-title">Know Your <span>Minimum</span></div>
+          <p>Calculate your monthly expenses and divide by the number of clients you can handle. That&rsquo;s your floor. Never go below it.</p>
+        </div>
+      </div>
+      <div class="post-num-block">
+        <div class="pnb-num">02</div>
+        <div class="pnb-content">
+          <div class="pnb-title">Research the <span>Market Rate</span></div>
+          <p>Check what other Nigerian freelancers charge for the same service on Fiverr, Upwork and local groups. Position yourself in the mid-to-high range.</p>
+        </div>
+      </div>
+      <div class="post-num-block">
+        <div class="pnb-num">03</div>
+        <div class="pnb-content">
+          <div class="pnb-title">Use a Professional <span>Rate Card</span></div>
+          <p>Sending a well-designed rate card instead of a WhatsApp message instantly positions you as a professional. Clients take you more seriously and rarely negotiate down.</p>
+        </div>
+      </div>
+      <div class="post-cta-box">
+        <div class="pcb-eye">Get the Tool</div>
+        <div class="pcb-title">Freelancer Rate Card Template</div>
+        <div class="pcb-sub">A professionally designed rate card you can edit with your name and services in minutes.</div>
+        <a href="https://payhip.com/b/F1V5w" target="_blank" class="btn-g">Get It Now &rarr;</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- POST 3: Budget -->
+<div class="post-modal" id="post-3">
+  <div class="post-modal-inner">
+    <button class="post-modal-close" onclick="closePost()">&#10005; Close</button>
+    <div class="post-modal-hero">
+      <div class="post-cat-tag">Money Tips</div>
+      <h1 class="post-modal-title">Why Every Nigerian Entrepreneur Needs a <em>Monthly Budget</em></h1>
+      <div class="post-modal-meta">
+        <span>By Neyo Digital</span>
+        <span class="pmsep"></span>
+        <span>March 2025</span>
+        <span class="pmsep"></span>
+        <span>3 min read</span>
+      </div>
+    </div>
+    <div class="post-modal-body">
+      <p>Most Nigerian entrepreneurs earn decent money but still feel broke at the end of the month. The problem is never the income &mdash; it&rsquo;s the <strong>lack of a system</strong> to manage it.</p>
+      <div class="post-tip">
+        <div class="post-tip-label">&#128161; Key Truth</div>
+        <div class="post-tip-text">&ldquo;A budget is not a restriction. It&rsquo;s a plan for your money to work for you.&rdquo;</div>
+      </div>
+      <h2>What a Monthly Budget Does For You</h2>
+      <div class="post-num-block">
+        <div class="pnb-num">01</div>
+        <div class="pnb-content">
+          <div class="pnb-title">Stops <span>Impulsive Spending</span></div>
+          <p>When you have a written plan, you think twice before every purchase. That alone saves most people &#8358;20,000+ monthly.</p>
+        </div>
+      </div>
+      <div class="post-num-block">
+        <div class="pnb-num">02</div>
+        <div class="pnb-content">
+          <div class="pnb-title">Shows You Where Your <span>Money Goes</span></div>
+          <p>Most people are shocked when they track their spending for the first time. Data gives you power to change habits.</p>
+        </div>
+      </div>
+      <div class="post-num-block">
+        <div class="pnb-num">03</div>
+        <div class="pnb-content">
+          <div class="pnb-title">Helps You <span>Save & Invest</span></div>
+          <p>When you budget first, savings become automatic. You stop saving what&rsquo;s left &mdash; you spend what&rsquo;s left after saving.</p>
+        </div>
+      </div>
+      <div class="post-cta-box">
+        <div class="pcb-eye">Get the Tool</div>
+        <div class="pcb-title">Monthly Budget Planner</div>
+        <div class="pcb-sub">A simple, powerful planner built for Nigerian income patterns. Track income, expenses and savings every month.</div>
+        <a href="https://payhip.com/b/zj7xQ" target="_blank" class="btn-g">Get It Now &rarr;</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+/* ══ BLOG POST MODAL ══ */
+.post-modal{position:fixed;inset:0;z-index:4000;background:var(--bg);overflow-y:auto;opacity:0;pointer-events:none;transform:translateY(40px);transition:opacity .4s ease,transform .4s ease;}
+.post-modal.open{opacity:1;pointer-events:all;transform:translateY(0);}
+.post-modal-inner{max-width:780px;margin:0 auto;padding:80px 40px 100px;}
+.post-modal-close{position:fixed;top:20px;right:24px;background:var(--bg2);border:1px solid var(--border);color:var(--cream);padding:9px 18px;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;font-family:'DM Sans',sans-serif;z-index:10;transition:all .3s;}
+.post-modal-close:hover{border-color:var(--gold);color:var(--gold);}
+.post-modal-hero{border-bottom:1px solid var(--border);padding-bottom:32px;margin-bottom:40px;}
+.post-cat-tag{display:inline-block;background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.25);color:var(--gold);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600;padding:6px 16px;border-radius:2px;margin-bottom:18px;}
+.post-modal-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,4vw,3rem);font-weight:600;color:var(--cream);line-height:1.1;margin-bottom:18px;}
+.post-modal-title em{font-style:italic;color:var(--gold);}
+.post-modal-meta{display:flex;align-items:center;gap:12px;font-size:.72rem;color:var(--muted);}
+.pmsep{width:4px;height:4px;border-radius:50%;background:var(--muted);}
+.post-modal-body h2{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;color:var(--cream);margin:36px 0 14px;padding-bottom:10px;border-bottom:1px solid var(--border);}
+.post-modal-body p{font-size:.9rem;color:rgba(250,247,242,.65);line-height:1.9;margin-bottom:18px;}
+.post-modal-body strong{color:var(--cream);}
+.post-tip{background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--gold);padding:18px 22px;margin:24px 0;border-radius:2px;}
+.post-tip-label{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:7px;}
+.post-tip-text{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-style:italic;color:var(--cream);line-height:1.6;}
+.post-num-block{display:flex;gap:18px;background:var(--bg2);border:1px solid var(--border);border-top:2px solid var(--gold);padding:22px;border-radius:3px;margin:16px 0;}
+.pnb-num{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:700;color:rgba(201,168,76,.18);line-height:1;flex-shrink:0;width:46px;}
+.pnb-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--cream);margin-bottom:6px;}
+.pnb-title span{color:var(--gold);}
+.pnb-content p{font-size:.82rem;color:var(--muted);line-height:1.75;margin-bottom:0;}
+.post-cta-box{background:linear-gradient(135deg,var(--bg2),#1a1508);border:1px solid var(--border);border-top:3px solid var(--gold);padding:28px;border-radius:3px;margin:36px 0;text-align:center;}
+.pcb-eye{font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+.pcb-title{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;color:var(--cream);margin-bottom:8px;}
+.pcb-sub{font-size:.8rem;color:var(--muted);line-height:1.6;margin-bottom:18px;}
+@media(max-width:600px){.post-modal-inner{padding:70px 20px 80px;}.post-num-block{flex-direction:column;gap:8px;}}
+</style>
 </body>
 </html>
